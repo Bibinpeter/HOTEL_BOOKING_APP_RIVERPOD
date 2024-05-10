@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '585574304620',
     projectId: 'cd-hotel',
     storageBucket: 'cd-hotel.appspot.com',
+    iosClientId: '585574304620-nn91acp3nuqi6mhluvkphbb2pj09i5tl.apps.googleusercontent.com',
     iosBundleId: 'com.example.hotel',
   );
 
@@ -72,6 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '585574304620',
     projectId: 'cd-hotel',
     storageBucket: 'cd-hotel.appspot.com',
+    iosClientId: '585574304620-nn91acp3nuqi6mhluvkphbb2pj09i5tl.apps.googleusercontent.com',
     iosBundleId: 'com.example.hotel',
   );
 
@@ -83,5 +85,4 @@ class DefaultFirebaseOptions {
     authDomain: 'cd-hotel.firebaseapp.com',
     storageBucket: 'cd-hotel.appspot.com',
   );
-
 }

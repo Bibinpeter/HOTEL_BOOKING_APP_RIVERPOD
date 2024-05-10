@@ -3,7 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hotel/screen/auth/login.dart';
+import 'package:hotel/screen/auth/screen/welcomepage.dart';
 import 'package:hotel/screen/home/home.dart';
 import 'package:lottie/lottie.dart';
 
@@ -62,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       backgroundColor: Colors.black,
       nextScreen: FirebaseAuth.instance.currentUser == null
-          ? const LoginPage()
+          ? const WelcomePage()
           : Homepage(),
       splashIconSize: 500,
       duration: 4000,
