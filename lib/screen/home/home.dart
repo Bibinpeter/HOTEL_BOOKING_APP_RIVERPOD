@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hotel/screen/auth/screen/login.dart';
-import 'package:hotel/screen/auth/service/auth_service.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key); // Fixed the super constructor
@@ -12,16 +10,17 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
+    final Size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-           AuthService().signOut();   
-           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Login(),), (route) => false);
-          },
-          child: Text('Click me'), // Add text to the button
-        ),
-      ),
+      appBar: AppBar(title: Text("jjjj jjjjjjj jjjjjjjj"),
+        backgroundColor: Colors.blueAccent,),
+      body: Stack(children: [
+        Container(
+          height: double.infinity,
+          margin: EdgeInsets.only(top: Size.height*0.25),
+          color: Colors.white,
+        )
+      ],),
     );
   }
-}
+} 

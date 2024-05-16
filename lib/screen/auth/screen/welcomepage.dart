@@ -4,8 +4,8 @@ import 'package:action_slider/action_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel/screen/auth/screen/login.dart';
 import 'package:hotel/screen/auth/screen/register.dart';
-import 'package:hotel/screen/auth/widget/CoustomButton.dart';
-import 'package:hotel/screen/auth/widget/carouselWidget.dart';  
+import 'package:hotel/screen/widget/CoustomButton.dart';
+import 'package:hotel/screen/widget/carouselWidget.dart';  
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);

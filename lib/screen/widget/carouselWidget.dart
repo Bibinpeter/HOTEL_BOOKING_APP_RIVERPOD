@@ -14,10 +14,10 @@ class carouselWidget extends StatelessWidget {
           margin: const EdgeInsets.all(5.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
-            image: const DecorationImage(
-              image: AssetImage("assets/images/—Pngtree—credit card payment hand drawn_5510943.png"),
-              fit: BoxFit.cover,
-            ),
+            // image: const DecorationImage(
+            //   image: AssetImage("assets/images/—Pngtree—credit card payment hand drawn_5510943.png"),
+            //   fit: BoxFit.cover,
+            // ),
           ),
         ),
         Container(

@@ -20,11 +20,9 @@ class AuthService {
       User user = (await firebaseAuth.signInWithEmailAndPassword(
               email: email, password: password))
           .user!;
-      // if (user.uid == '0UU2JGNDeDe0UtQfm556QcSl2Y02') {
-      //   return UserCredentialConstant.admin;
-      // } else {
+      
         return true;
-      // }
+     
     } on FirebaseAuthException {
       return false;
     }
@@ -36,8 +34,7 @@ class AuthService {
         print('Passwordreg: $password');
         print('fullnamereg: $fullName');
     try {
-      User user = (await firebaseAuth.createUserWithEmailAndPassword(
-              email: email, password: password)).user!;
+      User user = (await firebaseAuth.createUserWithEmailAndPassword( email: email, password: password)).user!;
       await DatabaseService(uid: user.uid)  .savingUserData(fullName, email, profile);
       print("registering");
       return true;
@@ -78,10 +75,10 @@ class AuthService {
         if (snapshot == null) {
           await FirebaseDatabaseClass(uid: user.uid).saveUserData(user.email!);
         }
-        // Save user email to Shared Preferences or wherever needed
+     
         HelperFunctions.saveUserEmailSF(user.email!);
         
-        // Navigate to Homepage
+      
         Navigator.of(context).push(
           MaterialPageRoute(builder: (context) => Homepage()),
         );

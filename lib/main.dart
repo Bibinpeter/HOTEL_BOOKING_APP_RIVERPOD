@@ -1,13 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:hotel/firebase_options.dart';
-import 'package:hotel/screen/splashscreen.dart';
+import 'package:flutter_config/flutter_config.dart';
+import 'package:hotel/firebase/firebase_options.dart';
+import 'package:hotel/screen/home/splashscreen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Add this line
-  await Firebase.initializeApp(
-   options: DefaultFirebaseOptions.currentPlatform,
-  );
+  WidgetsFlutterBinding.ensureInitialized(); 
+   await FlutterConfig.loadEnvVariables();// Add this line
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+
   runApp(const MyApp());
 }
 
