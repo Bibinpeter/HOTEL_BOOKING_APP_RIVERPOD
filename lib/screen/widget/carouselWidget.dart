@@ -10,22 +10,13 @@ class carouselWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       items: [
-        Container(
-          margin: const EdgeInsets.all(5.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8.0),
-            // image: const DecorationImage(
-            //   image: AssetImage("assets/images/—Pngtree—credit card payment hand drawn_5510943.png"),
-            //   fit: BoxFit.cover,
-            // ),
-          ),
-        ),
+        
         Container(
           margin: const EdgeInsets.all(5.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             image: const DecorationImage(
-              image: AssetImage("assets/images/pngegg (13).png"),
+              image: AssetImage("assets/images/pngeggworldtrip.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -35,7 +26,7 @@ class carouselWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             image: const DecorationImage(
-              image: AssetImage("assets/images/pngegg (16).png"),
+              image: AssetImage("assets/images/pngeggmapwalk.png"),
               fit: BoxFit.cover,
             ),
           ),

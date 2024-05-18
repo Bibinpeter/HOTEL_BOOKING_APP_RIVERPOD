@@ -91,7 +91,7 @@ class _welcomePageState extends State<WelcomePage> {
               padding: const EdgeInsets.all(10.0),
               child: Center(
                 child: Image.asset(
-                  "assets/images/pngwing.com (5).png",
+                  "assets/images/pngwingall.png",
                   fit: BoxFit.contain,
                 ),
               ),

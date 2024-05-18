@@ -65,7 +65,7 @@ class _SplashScreenState extends State<SplashScreen> {
           ? const WelcomePage()
           : Homepage(),
       splashIconSize: 500,
-      duration: 4000,
+      duration: 2500,
       splashTransition: SplashTransition.fadeTransition,
     );
   }
