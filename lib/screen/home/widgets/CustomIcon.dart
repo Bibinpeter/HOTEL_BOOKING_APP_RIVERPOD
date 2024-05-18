@@ -1,6 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class CustomIconWidget extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final icon;
   final Function()? onPressed;
   final double size;

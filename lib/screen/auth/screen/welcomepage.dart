@@ -8,12 +8,13 @@ import 'package:hotel/screen/widget/CoustomButton.dart';
 import 'package:hotel/screen/widget/carouselWidget.dart';  
 
 class WelcomePage extends StatefulWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+  const WelcomePage({super.key});
 
   @override
   State<WelcomePage> createState() => _welcomePageState();
 }
 
+// ignore: camel_case_types
 class _welcomePageState extends State<WelcomePage> {
   bool isPassword = false;
 
@@ -122,7 +123,7 @@ class _welcomePageState extends State<WelcomePage> {
           ActionSlider.standard(
            
             toggleColor: Colors.black,
-            successIcon: Icon(Icons.check,color: Colors.white,),
+            successIcon: const Icon(Icons.check,color: Colors.white,),
             icon: const Icon(Icons.arrow_forward,color: Colors.white,),
                     child: const Text('Slide to LOGIN '),
                     action: (controller) async {
@@ -132,7 +133,7 @@ class _welcomePageState extends State<WelcomePage> {
                       // ignore: use_build_context_synchronously
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) =>Login(),
+                          builder: (context) =>const Login(),
                         ),
                          
                       );
@@ -143,7 +144,7 @@ class _welcomePageState extends State<WelcomePage> {
           ElevatedButtonWidget(
             buttonText: " REGISTER ",
             onPressed: () {
-               Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegisterPage()));
+               Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RegisterPage()));
             },
           ),
         ],

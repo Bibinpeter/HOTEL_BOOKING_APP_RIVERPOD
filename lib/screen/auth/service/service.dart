@@ -21,7 +21,7 @@ class DatabaseService {
       });
     } catch (error) {
       
-    print(error);
+ //   print(error);
     }
   }
 
@@ -31,7 +31,7 @@ class DatabaseService {
       return await userCollection.where("email", isEqualTo: email).get();
     } catch (error) {
       
-    print(error);
+   // print(error);
       rethrow;
     }
   }

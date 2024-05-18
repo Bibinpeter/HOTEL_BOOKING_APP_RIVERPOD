@@ -12,6 +12,7 @@ import 'package:sign_button/constants.dart';
 import 'package:sign_button/create_button.dart';
 
 class Login extends StatefulWidget {
+  // ignore: use_key_in_widget_constructors
   const Login({Key? key});
 
   @override
@@ -19,8 +20,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController _emailcontroller = TextEditingController();
-  TextEditingController _passwordcontroller = TextEditingController();
+  final TextEditingController _emailcontroller = TextEditingController();
+  final TextEditingController _passwordcontroller = TextEditingController();
   String email = "";
   String password = "";
   bool isLoading = false;
@@ -64,7 +65,7 @@ class _LoginState extends State<Login> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
@@ -107,7 +108,7 @@ class _LoginState extends State<Login> {
                     obscureText: true,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButtonWidget(
@@ -116,7 +117,7 @@ class _LoginState extends State<Login> {
                     await login();
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 SignInButton(
@@ -127,10 +128,10 @@ class _LoginState extends State<Login> {
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => RegisterPage(),
+                        builder: (context) => const RegisterPage(),
                       ));
                     },
-                    child: Text("register"))
+                    child: const Text("register"))
               ],
             ),
           ),
@@ -148,6 +149,7 @@ class _LoginState extends State<Login> {
       await authService
           .loginWithUserNameandPassword(email, password)
           .then((value) async {
+        // ignore: unrelated_type_equality_checks
         if (value == UserCredentialConstant.user) {
           QuerySnapshot snapshot =
               await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
@@ -159,6 +161,7 @@ class _LoginState extends State<Login> {
 
           // ignore: u se_build_context_synchronously, use_build_context_synchronously
           nextScreenReplace(
+              // ignore: use_build_context_synchronously
               context, Page, FirebaseAuth.instance.currentUser!.uid);
         } else {
           setState(() {

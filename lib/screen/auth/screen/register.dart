@@ -6,7 +6,7 @@ import 'package:hotel/screen/auth/service/fn.dart';
 import 'package:hotel/screen/auth/service/helper.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -214,6 +214,7 @@ class _RegisterPageState extends State<RegisterPage> {
           await HelperFunctions.saveUserEmailSF(email);
           // ignore: use_build_context_synchronously
           nextScreenReplace(
+              // ignore: use_build_context_synchronously
               context, Page, FirebaseAuth.instance.currentUser!.uid);
         } else {
         

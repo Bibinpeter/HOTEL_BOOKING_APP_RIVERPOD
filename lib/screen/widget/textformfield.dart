@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 
 class TextFormFieldWidgetadmin extends StatelessWidget {
    
-
-  
-
+ 
     TextFormFieldWidgetadmin({
-    Key? key,
+    super.key,
     required this.controller,
     required this.hintText,
     this.prefixIcon,
@@ -16,7 +14,7 @@ class TextFormFieldWidgetadmin extends StatelessWidget {
     this.suffixIcon,
     this.obscureText,  
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   final TextEditingController controller;
   final String hintText;

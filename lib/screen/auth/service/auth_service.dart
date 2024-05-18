@@ -13,8 +13,7 @@ class AuthService {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   Future<bool> loginWithUserNameandPassword(
       String email, String password) async {
-        print('emailog:$email');
-         print('passwordlog:$password');
+       
     try {
       // ignore: unused_local_variable
       User user = (await firebaseAuth.signInWithEmailAndPassword(
@@ -30,17 +29,14 @@ class AuthService {
 
   Future registerUserWithEmailandPassword(
       String fullName, String email, String password, String profile) async {
-        print('emailreg: $email');
-        print('Passwordreg: $password');
-        print('fullnamereg: $fullName');
+    
     try {
       User user = (await firebaseAuth.createUserWithEmailAndPassword( email: email, password: password)).user!;
       await DatabaseService(uid: user.uid)  .savingUserData(fullName, email, profile);
-      print("registering");
+      
       return true;
     } on FirebaseAuthException catch (e) {
-      print("Registering error");
-      print(e.message);
+      
       return e.message;
     }
   }
@@ -79,13 +75,14 @@ class AuthService {
         HelperFunctions.saveUserEmailSF(user.email!);
         
       
+        // ignore: use_build_context_synchronously
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => Homepage()),
+          MaterialPageRoute(builder: (context) => const Homepage()),
         );
       }
     }
   } catch (e) {
-    print(e);
+  //  print(e);
   }
 }
 

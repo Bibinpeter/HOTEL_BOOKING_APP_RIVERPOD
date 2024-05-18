@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class ElevatedButtonWidget extends StatelessWidget {
   const ElevatedButtonWidget({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.buttonText,
-  }) : super(key: key);
+  });
 
   final void Function() onPressed;
   final String buttonText;

@@ -8,6 +8,7 @@ import 'package:hotel/screen/home/home.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
+  // ignore: use_key_in_widget_constructors
   const SplashScreen({Key? key});
 
   @override
@@ -63,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.black,
       nextScreen: FirebaseAuth.instance.currentUser == null
           ? const WelcomePage()
-          : Homepage(),
+          : const Homepage(),
       splashIconSize: 500,
       duration: 2500,
       splashTransition: SplashTransition.fadeTransition,

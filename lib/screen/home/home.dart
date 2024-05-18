@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotel/screen/home/widgets/CustomIcon.dart';
 
 class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key); // Fixed the super constructor
+  const Homepage({super.key}); 
 
   @override
   State<Homepage> createState() => _HomepageState();
@@ -27,8 +27,8 @@ class _HomepageState extends State<Homepage> {
               margin: EdgeInsets.only(top: Size.height * 0.25),
               color: Colors.white,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20,),
               child: Column(
                 children: [
                   _Headersection(),
@@ -43,7 +43,7 @@ class _HomepageState extends State<Homepage> {
 }
 
 class _Headersection extends StatelessWidget {
-  const _Headersection({super.key});
+  const _Headersection();
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +55,9 @@ class _Headersection extends StatelessWidget {
               radius: 25,
               backgroundImage: AssetImage("assets/images/photo.png"),
             ),
-          Spacer(),
+          const Spacer(),
             CustomIconWidget(
-              icon: Icon(Icons.notifications),
+              icon: const Icon(Icons.notifications),
               onPressed: () {},
             )
           ],
