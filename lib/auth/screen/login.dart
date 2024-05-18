@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hotel/screen/auth/screen/register.dart';
-import 'package:hotel/screen/auth/service/auth_service.dart';
-import 'package:hotel/screen/auth/service/fn.dart';
-import 'package:hotel/screen/auth/service/helper.dart';
-import 'package:hotel/screen/auth/service/service.dart';
+import 'package:hotel/auth/screen/register.dart';
+import 'package:hotel/auth/service/auth_service.dart';
+import 'package:hotel/auth/service/fn.dart';
+import 'package:hotel/auth/service/helper.dart';
+import 'package:hotel/auth/service/service.dart';
 import 'package:hotel/screen/widget/CoustomButton.dart';
 import 'package:hotel/screen/widget/textformfield.dart';
 import 'package:sign_button/constants.dart';

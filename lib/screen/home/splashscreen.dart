@@ -3,7 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hotel/screen/auth/screen/welcomepage.dart';
+import 'package:hotel/auth/screen/welcomepage.dart';
 import 'package:hotel/screen/home/home.dart';
 import 'package:lottie/lottie.dart';
 
@@ -66,7 +66,7 @@ class _SplashScreenState extends State<SplashScreen> {
           ? const WelcomePage()
           : const Homepage(),
       splashIconSize: 500,
-      duration: 2500,
+      duration: 4500,
       splashTransition: SplashTransition.fadeTransition,
     );
   }

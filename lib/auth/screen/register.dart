@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hotel/screen/auth/service/auth_service.dart';
-import 'package:hotel/screen/auth/service/fn.dart';
-import 'package:hotel/screen/auth/service/helper.dart';
+import 'package:hotel/auth/service/auth_service.dart';
+import 'package:hotel/auth/service/fn.dart';
+import 'package:hotel/auth/service/helper.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});

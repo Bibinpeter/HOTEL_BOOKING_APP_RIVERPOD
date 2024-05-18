@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:action_slider/action_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:hotel/screen/auth/screen/login.dart';
-import 'package:hotel/screen/auth/screen/register.dart';
+import 'package:hotel/auth/screen/login.dart';
+import 'package:hotel/auth/screen/register.dart';
 import 'package:hotel/screen/widget/CoustomButton.dart';
 import 'package:hotel/screen/widget/carouselWidget.dart';  
 
