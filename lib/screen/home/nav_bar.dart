@@ -46,7 +46,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: ((context) => const mapPage()),
+                    builder: ((context) => const MapPage()),
                   ),
                 );
               },
