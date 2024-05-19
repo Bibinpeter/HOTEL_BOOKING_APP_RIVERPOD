@@ -41,11 +41,11 @@ class SearchCard extends StatelessWidget {
               const Icon(Icons.calendar_month),
               const SizedBox(width: 10),
               CustomTextField(
-                label: "From",
+                label: "FROM", 
                 controller: dateFromTextcontroller,
               ),
               CustomTextField(
-                label: "To",
+                label: "TO",
                 controller: dateToTextcontroller,
               ),   
             ],
