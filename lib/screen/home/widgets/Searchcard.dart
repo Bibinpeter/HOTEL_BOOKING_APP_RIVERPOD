@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:hotel/screen/home/searchlottie.dart';
 import 'package:hotel/screen/home/widgets/CustomElevated.dart';
 import 'package:hotel/screen/home/widgets/customtextfield.dart';
 import 'package:intl/intl.dart';
@@ -11,7 +12,7 @@ class SearchCard extends StatelessWidget {
     final locationTextcontroller = TextEditingController();
     final dateFromTextcontroller = TextEditingController(); 
     final dateToTextcontroller = TextEditingController();
-    locationTextcontroller.text = 'Singapore';
+    locationTextcontroller.text = 'kochi';
     dateFromTextcontroller.text = dateToTextcontroller.text =
         DateFormat('dd/MM/yyyy').format(DateTime.now());
 
@@ -54,7 +55,9 @@ class SearchCard extends StatelessWidget {
               width: 200,
               child: CustomElevatedButton(text: "Search",color: const Color.fromARGB(255, 238, 188, 38),
                 fontSize: 16.0,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Searchlottie(),));
+                }
               ))
         ],
       ),

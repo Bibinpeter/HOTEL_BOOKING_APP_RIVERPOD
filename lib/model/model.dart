@@ -32,7 +32,7 @@ class HotelModel {
       id: '1',
       thumbnailPath: 'assets/images/crownplaza.jpg',  
       title: 'crown plaza',
-      location: 'Bantul Regency, Yogyakarta',
+      location: 'kochi, near kundannur by pass', 
       address: 'Jl. Parangtritis km 8.5, Yogyakarta 55186',
       description:
           'We are only a 10-minute drive from the Water Castle (Tamansari) and Yogyakarta Palace. An airport shuttle is provided for a surcharge (available 24 hours).',
