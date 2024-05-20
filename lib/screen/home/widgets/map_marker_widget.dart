@@ -18,11 +18,11 @@ class MapMarkerPrice extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          const Align(
+          const Align(      
             alignment: Alignment.center,
             child: Icon(
               Icons.arrow_drop_down,
-              color:Colors.blue,
+              color:Colors.black,
               size: 50,
             ),
           ),
@@ -34,7 +34,7 @@ class MapMarkerPrice extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8)),
             child:Text(
               price,
-             style: TextStyle(fontSize: 18,color: Colors.white),
+             style: const TextStyle(fontSize: 18,color: Colors.white),
             ),
           ),
         ],

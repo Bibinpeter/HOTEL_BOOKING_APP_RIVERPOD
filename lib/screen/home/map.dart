@@ -6,7 +6,6 @@ import 'package:hotel/provider/map_markers_provider.dart';
 import 'package:hotel/provider/selected_hotel_provider.dart';
 import 'package:hotel/screen/home/nav_bar.dart';
 import 'package:hotel/screen/home/widgets/custommap.dart';
-import 'package:hotel/screen/home/widgets/hotelcard.dart';
 
 class MapPage extends ConsumerWidget {
   const MapPage({Key? key}) : super(key: key);
@@ -37,15 +36,12 @@ class MapPage extends ConsumerWidget {
                   zoom: 12.5,
                 ),
                 markerWidgets: markers.toList(),
-              ),
-              selectedHotel.maybeWhen(
+              ), 
+              selectedHotel.maybeWhen(  
                 data: (hotel) {
-                  return Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: HotelCard(hotel: hotel),
-                    ),
+                  return Align(  
+                    alignment: Alignment.topCenter,
+                    
                   );
                 },
                 orElse: () => const SizedBox.shrink(),

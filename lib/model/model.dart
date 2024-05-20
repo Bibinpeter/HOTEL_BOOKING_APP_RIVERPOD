@@ -30,15 +30,15 @@ class HotelModel {
   static List<HotelModel> sampleHotels = const [
     HotelModel(
       id: '1',
-      thumbnailPath: 'assets/images/thumbnail1.png',
-      title: 'D`Omah Hotel Yogya',
+      thumbnailPath: 'assets/images/crownplaza.jpg',  
+      title: 'crown plaza',
       location: 'Bantul Regency, Yogyakarta',
       address: 'Jl. Parangtritis km 8.5, Yogyakarta 55186',
       description:
           'We are only a 10-minute drive from the Water Castle (Tamansari) and Yogyakarta Palace. An airport shuttle is provided for a surcharge (available 24 hours).',
       ratingScore: 4.25,
-      coordinate: LatLng(-7.8712168283326625, 110.353484068852),
-      price: 458,
+      coordinate: LatLng(9.9341,76.3187),
+      price: 4580,
       imagePaths: [
         'assets/images/thumbnail1.png',
         'assets/images/thumbnail2.png',
@@ -46,35 +46,17 @@ class HotelModel {
       ],
       totalReview: 134,
     ),
-    HotelModel(
+     HotelModel(
       id: '2',
-      thumbnailPath: 'assets/images/thumbnail2.png',
-      title: 'Greenhost Boutique Hotel',
+      thumbnailPath: 'assets/images/holidayinn.jpeg',
+      title: 'Holiday inn',
       location: 'Bantul Regency, Yogyakarta',
       address: 'Jl. Parangtritis km 8.5, Yogyakarta 55186',
       description:
           'We are only a 10-minute drive from the Water Castle (Tamansari) and Yogyakarta Palace. An airport shuttle is provided for a surcharge (available 24 hours).',
-      ratingScore: 3.6,
-      coordinate: LatLng(-7.8188302371260265, 110.36928495262913),
-      price: 338,
-      imagePaths: [
-         'assets/images/thumbnail1.png',
-      'assets/images/thumbnail2.png',
-        'assets/images/gallery3.png',
-      ],
-      totalReview: 432,
-    ),
-    HotelModel(
-      id: '3',
-      thumbnailPath: 'assets/images/thumbnail1.png',
-      title: 'Candi Tirta Raharjo',
-      location: 'Bantul Regency, Yogyakarta',
-      address: 'Jl. Parangtritis km 8.5, Yogyakarta 55186',
-      description:
-          'We are only a 10-minute drive from the Water Castle (Tamansari) and Yogyakarta Palace. An airport shuttle is provided for a surcharge (available 24 hours).',
-      ratingScore: 2.6,
-      coordinate: LatLng(-7.842320836894338, 110.33722565674677),
-      price: 698,
+      ratingScore: 4.6,
+      coordinate: LatLng(9.9902, 76.3158),
+      price: 6980,
       imagePaths: [
         'assets/images/thumbnail1.png',
          'assets/images/thumbnail2.png',
@@ -82,6 +64,25 @@ class HotelModel {
       ],
       totalReview: 99,
     ),
+    HotelModel(
+      id: '3',
+      thumbnailPath: 'assets/images/marriot.jpg',
+      title: 'Marriot suites',
+      location: 'Bantul Regency, Yogyakarta',
+      address: 'Jl. Parangtritis km 8.5, Yogyakarta 55186',
+      description:
+          'We are only a 10-minute drive from the Water Castle (Tamansari) and Yogyakarta Palace. An airport shuttle is provided for a surcharge (available 24 hours).',
+      ratingScore: 3.6,
+      coordinate: LatLng(10.0294, 76.3076),
+      price: 3380,
+      imagePaths: [
+         'assets/images/thumbnail1.png',
+      'assets/images/thumbnail2.png',
+        'assets/images/gallery3.png',
+      ],
+      totalReview: 432,
+    ),
+   
     HotelModel(
       id: '4',
       thumbnailPath: 'assets/images/thumbnail2.png',
@@ -91,8 +92,8 @@ class HotelModel {
       description:
           'We are only a 10-minute drive from the Water Castle (Tamansari) and Yogyakarta Palace. An airport shuttle is provided for a surcharge (available 24 hours).',
       ratingScore: 10,
-      coordinate: LatLng(-7.8147871933139434, 110.36921653947174),
-      price: 123,
+      coordinate: LatLng(10.5235, 76.2141),
+      price: 1230,
       imagePaths: [
         'assets/images/thumbnail1.png',
          'assets/images/thumbnail2.png',

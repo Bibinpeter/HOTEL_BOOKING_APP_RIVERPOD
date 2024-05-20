@@ -16,17 +16,15 @@ class MapMarkers extends _$MapMarkers {
   Future<Set<MarkerWidget>> build() async {
     final HotelRepository hotelRepository = ref.watch(hotelRepositoryProvider);
 
-    Set<MarkerWidget> markerWidgets = (await hotelRepository.getHotels())
-        .map(
-          (hotel) => MarkerWidget(
+    Set<MarkerWidget> markerWidgets = (await hotelRepository.getHotels()).map((hotel) => MarkerWidget(
             marker: Marker(
               markerId: MarkerId(hotel.coordinate.toString()),
-              position: hotel.coordinate,
-              onTap: () {
+              position: hotel.coordinate,  
+              onTap: () {         
                 ref.read(selectedHotelProvider.notifier).setSelectedHotel(hotel.id);
               },
             ),
-            widget: MapMarkerPrice(price: '\$${hotel.price}'),
+            widget: MapMarkerPrice(price: '\₹ ${hotel.price}'),
           ),
         )
         .toSet();
