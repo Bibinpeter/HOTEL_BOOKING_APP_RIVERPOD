@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/screen/home/home.dart';
 import 'package:hotel/screen/home/map.dart';
+import 'package:hotel/screen/home/profile.dart';
 
 class CustomNavBar extends StatefulWidget {
   const CustomNavBar({
@@ -55,9 +56,17 @@ class _CustomNavBarState extends State<CustomNavBar> {
               iconPath: Icons.book_online,
               text: 'Booking',
             ),
-            const _NavBarIcon(
+           _NavBarIcon(
               iconPath: Icons.verified_user,
               text: 'Profile',
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => const ProfilePage()),
+                  ),
+                );
+              },
             ),
           ],
         ),

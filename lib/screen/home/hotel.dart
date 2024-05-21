@@ -11,9 +11,9 @@ import 'package:hotel/screen/home/widgets/CustomElevated.dart';
 
 class HotelDetailScreen extends StatelessWidget {
   const HotelDetailScreen({
-    Key? key,
+    super.key,
     required this.hotel,
-  }) : super(key: key);
+  });
 
   final HotelModel hotel;
 
@@ -76,7 +76,8 @@ class HotelDetailScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    IconButton(onPressed: ()=> Navigator.of(context).pop(), icon:Icon(Icons.heart_broken))
+                    IconButton(onPressed: ()=> Navigator.of(context).pop(),
+                     icon:const Icon(Icons.favorite,color: Colors.grey,))
                   ],
                 ),
               ),
@@ -91,9 +92,8 @@ class HotelDetailScreen extends StatelessWidget {
 
 class _HotelTitleSection extends StatelessWidget {
   const _HotelTitleSection({
-    Key? key,
     required this.hotel,
-  }) : super(key: key);
+  });
 
   final HotelModel hotel;
 
@@ -126,7 +126,7 @@ class _HotelTitleSection extends StatelessWidget {
 }
 
 class _FacilitiesSection extends StatelessWidget {
-  const _FacilitiesSection({Key? key}) : super(key: key);
+  const _FacilitiesSection();
 
   @override
   Widget build(BuildContext context) {
@@ -200,9 +200,8 @@ class _FacilitiesSection extends StatelessWidget {
 
 class _GallerySection extends StatelessWidget {
   const _GallerySection({
-    Key? key,
     required this.imagePaths,
-  }) : super(key: key);
+  });
 
   final List<String> imagePaths;
 
@@ -214,7 +213,7 @@ class _GallerySection extends StatelessWidget {
          const Padding(
            padding:  EdgeInsets.symmetric(horizontal: 20),
            child: Text('Gallery', 
-           style:TextStyle(fontWeight: FontWeight.bold) ),
+           style:TextStyle(fontWeight: FontWeight.bold,fontSize: 20) ),
          ),
         const SizedBox(height: 5),
         SizedBox(
@@ -249,12 +248,11 @@ class _GallerySection extends StatelessWidget {
 
 class _LocationSection extends StatelessWidget {
   const _LocationSection({
-    Key? key,
     required this.address,
     required this.coordinate,
     required this.description, 
     required this.hotel,
-  }) : super(key: key);
+  });
 
   final String address;
   final LatLng coordinate;
@@ -266,9 +264,9 @@ class _LocationSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-          Text(hotel.location,style: TextStyle(fontWeight: FontWeight.bold),),
+          Text(hotel.location,style: const TextStyle(fontWeight: FontWeight.bold),),
         const SizedBox(height: 10),
-        Text(hotel.address,style: TextStyle(fontWeight: FontWeight.normal),),
+        Text(hotel.address,style: const TextStyle(fontWeight: FontWeight.normal),),
         const SizedBox(height: 10),
         FutureBuilder<BitmapDescriptor?>(
           future: _convertToMarkerBitmap(),
@@ -297,7 +295,7 @@ class _LocationSection extends StatelessWidget {
           },
         ),
          const SizedBox(height: 10),
-        Text(hotel.description,style: TextStyle(fontWeight: FontWeight.normal),),
+        Text(hotel.description,style: const TextStyle(fontWeight: FontWeight.normal),),
         const SizedBox(height: 10),        
       ],
     );
@@ -327,11 +325,11 @@ class _ReserveBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
+          const Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             Text('Start from',  ),
+             Text('Start from',),
               
             ],
           ),

@@ -17,7 +17,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {   
     const colorizeColors = [
       Color.fromARGB(255, 246, 244, 244),
       Color.fromARGB(255, 50, 51, 51),
