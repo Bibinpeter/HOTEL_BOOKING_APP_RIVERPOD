@@ -6,8 +6,8 @@ import 'package:hotel/auth/service/auth_service.dart';
 import 'package:hotel/auth/service/fn.dart';
 import 'package:hotel/auth/service/helper.dart';
 import 'package:hotel/auth/service/service.dart';
-import 'package:hotel/screen/widget/CoustomButton.dart';
-import 'package:hotel/screen/widget/textformfield.dart';
+import 'package:hotel/auth/screen/widget/CoustomButton.dart';
+import 'package:hotel/auth/screen/widget/textformfield.dart';
 import 'package:sign_button/constants.dart';
 import 'package:sign_button/create_button.dart';
 
