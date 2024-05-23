@@ -9,39 +9,114 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  AuthService authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
-    AuthService authService = AuthService();
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: const Text('Logout'),
-                  content: const Text('Are you sure you want to logout?'),
-                  actions: <Widget>[
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop(); 
-                      },
-                      child: const Text('Back'),
+      appBar: AppBar(
+        title: const Text('Profile'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 50,
+                    backgroundImage: NetworkImage(
+                        'https://e0.pxfuel.com/wallpapers/105/23/desktop-wallpaper-compromised-character-gaming-profile-dark-cute-cartoon-boys-thumbnail.jpg'), // Replace with your avatar URL
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Username', // Replace with actual username
+                    style: TextStyle(
+                      color: Colors.white, 
+                      fontSize: 16,
                     ),
-                    TextButton(
-                      onPressed: () {
-                        authService.signOut();
-                        Navigator.of(context).pop(); 
-                      },
-                      child: const Text('Confirm'),
-                    ),
-                  ],
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Logout'),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text('Logout'),
+                      content: const Text('Are you sure you want to logout?'),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Back'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            authService.signOut();
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Confirm'),
+                        ),
+                      ],
+                    );
+                  },
                 );
               },
-            );
-          },
-          child: const Text("Logout"),
+            ),
+          ],
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage: NetworkImage(
+                  'https://e0.pxfuel.com/wallpapers/105/23/desktop-wallpaper-compromised-character-gaming-profile-dark-cute-cartoon-boys-thumbnail.jpg'), // Replace with your avatar URL
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text('Logout'),
+                      content: const Text('Are you sure you want to logout?'),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Back'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            authService.signOut();
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Confirm'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              child: const Text("Logout"),
+            ),
+          ],
         ),
       ),
     );
