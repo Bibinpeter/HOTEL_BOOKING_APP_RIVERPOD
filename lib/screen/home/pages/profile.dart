@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/auth/service/auth_service.dart';
-import 'package:hotel/screen/home/widgets/profile_container_widget.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

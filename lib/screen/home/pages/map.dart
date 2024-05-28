@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hotel/provider/map_location_provider.dart';
 import 'package:hotel/provider/map_markers_provider.dart';
 import 'package:hotel/provider/selected_hotel_provider.dart';
-import 'package:hotel/screen/home/nav_bar.dart';
+import 'package:hotel/screen/home/pages/nav_bar.dart';
 import 'package:hotel/screen/home/widgets/custommap.dart';
 
 class MapPage extends ConsumerWidget {

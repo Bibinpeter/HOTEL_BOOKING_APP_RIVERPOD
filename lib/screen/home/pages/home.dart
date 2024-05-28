@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hotel/provider/all_hotels_provider.dart';
-import 'package:hotel/screen/home/nav_bar.dart';
+import 'package:hotel/screen/home/pages/nav_bar.dart';
 import 'package:hotel/screen/home/widgets/Searchcard.dart';
 import 'package:hotel/screen/home/widgets/headersection.dart';
 import 'package:hotel/screen/home/widgets/hotelcard.dart';

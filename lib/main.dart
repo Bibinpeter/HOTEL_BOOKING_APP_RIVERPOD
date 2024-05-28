@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_config/flutter_config.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hotel/firebase/firebase_options.dart';
-import 'package:hotel/screen/home/splashscreen.dart';
+import 'package:hotel/screen/home/pages/splashscreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); 

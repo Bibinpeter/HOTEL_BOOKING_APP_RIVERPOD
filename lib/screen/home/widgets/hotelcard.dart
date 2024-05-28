@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/model/model.dart';
-import 'package:hotel/screen/home/hotel.dart';
+import 'package:hotel/screen/home/pages/hotel.dart';
 
 class HotelCard extends StatelessWidget {
   final HotelModel hotel;

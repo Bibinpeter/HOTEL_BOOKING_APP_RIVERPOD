@@ -5,7 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hotel/auth/service/firebaseclass.dart';
 import 'package:hotel/auth/service/helper.dart';
 import 'package:hotel/auth/service/service.dart';
-import 'package:hotel/screen/home/home.dart';
+import 'package:hotel/screen/home/pages/home.dart';
 
 enum UserCredentialConstant { user, adim, error, admin }
 

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:hotel/screen/home/searchlottie.dart';
+import 'package:hotel/screen/home/pages/searchlottie.dart';
 import 'package:hotel/screen/home/widgets/CustomElevated.dart';
 import 'package:hotel/screen/home/widgets/customtextfield.dart';
 import 'package:intl/intl.dart';

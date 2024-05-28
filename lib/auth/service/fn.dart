@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hotel/auth/screen/login.dart';
-import 'package:hotel/screen/home/home.dart';
+import 'package:hotel/screen/home/pages/home.dart';
  
 
 const textInputDecoration = InputDecoration(

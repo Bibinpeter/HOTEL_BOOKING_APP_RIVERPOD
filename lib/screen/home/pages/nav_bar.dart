@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hotel/screen/home/home.dart';
-import 'package:hotel/screen/home/map.dart';
-import 'package:hotel/screen/home/profile.dart';
+import 'package:hotel/screen/home/pages/home.dart';
+import 'package:hotel/screen/home/pages/map.dart';
+import 'package:hotel/screen/home/pages/profile.dart';
 
 class CustomNavBar extends StatefulWidget {
   const CustomNavBar({
