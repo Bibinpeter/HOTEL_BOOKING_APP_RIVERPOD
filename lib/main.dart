@@ -2,13 +2,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_config/flutter_config.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hotel/firebase/firebase_options.dart';
+import 'package:hotel/pushservice/pushnoti.dart';
 import 'package:hotel/screen/home/pages/splashscreen.dart';
 
+  
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); 
-   await FlutterConfig.loadEnvVariables();// Add this line
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+   await FlutterConfig.loadEnvVariables(); 
+  await Firebase.initializeApp();
+ await FirebaseApi().initNotifications();
 
   runApp(const ProviderScope(child:MyApp()));
 }

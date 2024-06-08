@@ -8,20 +8,22 @@ class Booking extends StatefulWidget {
 }
 
 class _BookingState extends State<Booking> {
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar( 
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-        title: Text('Notification'),
+        title: const Text('Notification'),
       ),
       body: Center(
-        child: Text('Booking Page'),
+        child:  ElevatedButton(onPressed: (){
+         },
+         child: const Text("fetch it ")),
       ),
     );
   }
