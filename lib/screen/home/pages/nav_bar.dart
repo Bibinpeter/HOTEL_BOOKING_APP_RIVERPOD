@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel/screen/home/pages/booking.dart';
 import 'package:hotel/screen/home/pages/home.dart';
 import 'package:hotel/screen/home/pages/map.dart';
 import 'package:hotel/screen/home/pages/profile.dart';
@@ -52,9 +53,17 @@ class _CustomNavBarState extends State<CustomNavBar> {
                 );
               },
             ),
-            const _NavBarIcon(
+              _NavBarIcon(
               iconPath: Icons.book_online,
               text: 'Booking',
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => const  Booking()),
+                  ),
+                );
+              },
             ),
            _NavBarIcon(
               iconPath: Icons.verified_user,
